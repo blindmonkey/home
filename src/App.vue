@@ -5,14 +5,14 @@
         <canvas id="canvas" width="800" height="600" v-bind:class="{ focused: !textVisible }"></canvas>
       </transition>
     </div>
-    <small style="position:fixed; right: 40px; top: 20px" class="fadein">
+    <small style="position:fixed; right: 40px; top: 20px; z-index: 1000" class="fadein">
       <button id="hide-button" @click="hideContent()">Click here to hide/show the text</button>
     </small>
 
     <transition name="fade">
       <div v-show="textVisible">
-        <div class="border-bottom mt-4 pb-2 ml-2">
-          <h1 class="d-none d-sm-block">
+        <div class="border-bottom mt-4 pb-2 mb-3">
+          <h1 class="d-none d-sm-block ml-3">
             <img style="width: 1.5em; height: 1.5em" class="rounded-circle mr-3" src="./assets/photo.jpg"></img>
             Sergey Grabkovsky
           </h1>
@@ -29,7 +29,7 @@
           </nav>
         </div>
         <div class="row">
-          <aside class="col-12 col-md-3 col-sm-4 p-0 d-none d-sm-block">
+          <aside class="col-12 col-lg-3 col-md-3 col-sm-4 p-0 d-none d-sm-block">
             <nav class="navbar navbar-expand flex-sm-column flex-row nav-pills align-items-start py-2">
               <Navigation class="flex-column w-100 justify-content-between"></Navigation>
             </nav>

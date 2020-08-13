@@ -6,7 +6,6 @@ import Projects from './views/Projects.vue';
 
 Vue.use(Router);
 
-console.log('Creating new router');
 export default new Router({
   // mode: 'history',
   // base: process.env.BASE_URL,
@@ -14,6 +13,6 @@ export default new Router({
     { path: '/about', component: About },
     { path: '/experience', component: Experience },
     { path: '/projects', component: Projects },
-    { path: '*', redirect: '/about' }
+    { path: '*', redirect: '/about' },
   ],
 });
